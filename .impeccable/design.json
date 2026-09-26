@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-20T23:48:47.5769227+06:00",
+  "title": "Design System: HAVEN Hero Study",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Carbon Ink",
+        "canonical": "#151717",
+        "tonalRamp": [
+          "oklch(15% 0.004 170)",
+          "oklch(25% 0.004 170)",
+          "oklch(38% 0.004 170)",
+          "oklch(50% 0.004 170)",
+          "oklch(63% 0.004 170)",
+          "oklch(75% 0.004 170)",
+          "oklch(86% 0.004 170)",
+          "oklch(95% 0.004 170)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Clear Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(28% 0 0)",
+          "oklch(42% 0 0)",
+          "oklch(56% 0 0)",
+          "oklch(69% 0 0)",
+          "oklch(81% 0 0)",
+          "oklch(91% 0 0)",
+          "oklch(100% 0 0)"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Faded Ink",
+        "canonical": "rgba(21, 23, 23, 0.5)",
+        "tonalRamp": [
+          "oklch(15% 0.004 170 / 0.5)",
+          "oklch(25% 0.004 170 / 0.5)",
+          "oklch(38% 0.004 170 / 0.5)",
+          "oklch(50% 0.004 170 / 0.5)",
+          "oklch(63% 0.004 170 / 0.5)",
+          "oklch(75% 0.004 170 / 0.5)",
+          "oklch(86% 0.004 170 / 0.5)",
+          "oklch(95% 0.004 170 / 0.5)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Hero Display",
+        "purpose": "The opening four-word statement and no smaller utility role."
+      },
+      "headline": {
+        "displayName": "Editorial Headline",
+        "purpose": "Large follow-up statements on white surfaces."
+      },
+      "body": {
+        "displayName": "Supporting Copy",
+        "purpose": "Balanced hero copy with selective bold and muted emphasis."
+      },
+      "label": {
+        "displayName": "Navigation Label",
+        "purpose": "Compact navigation and action labels."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "entrance-expressive",
+        "value": "expo.out",
+        "purpose": "Long, confident arrivals for words and atmospheric image layers."
+      },
+      {
+        "name": "scroll-linear",
+        "value": "Lenis lerp 0.085 with GSAP scrub 0.1",
+        "purpose": "Smooths wheel input while keeping layered transforms directly coupled to scroll position."
+      },
+      {
+        "name": "control-standard",
+        "value": "220ms ease",
+        "purpose": "Hover inversion, lift, and arrow travel on capsule actions."
+      },
+      {
+        "name": "nav-underline",
+        "value": "240ms ease",
+        "purpose": "Draws navigation underlines across the label."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "767px"
+      },
+      {
+        "name": "narrow-phone",
+        "value": "420px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Call to Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The main capsule action over the hero atmosphere.",
+      "html": "<a class=\"ds-cta\" href=\"#\"><span>Explore Homes</span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h13M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 22px 0 25px; gap: 15px; color: #fff; font: 600 14px/1 'Instrument Sans', Arial, sans-serif; text-decoration: none; background: #151717; border: 1px solid #151717; border-radius: 999px; transition: color 220ms ease, background-color 220ms ease, transform 220ms ease; } .ds-cta svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5; transition: transform 220ms ease; } .ds-cta:hover { color: #151717; background: transparent; transform: translateY(-2px); } .ds-cta:hover svg { transform: translateX(3px); } .ds-cta:focus-visible { outline: 3px solid #151717; outline-offset: 4px; } .ds-cta:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Compact Account Action",
+      "kind": "button",
+      "refersTo": "button-compact",
+      "description": "A compact authentication action positioned at the header's trailing edge.",
+      "html": "<a class=\"ds-account\" href=\"#\">Sign In</a>",
+      "css": ".ds-account { display: inline-flex; align-items: center; justify-content: center; min-width: 94px; min-height: 44px; padding: 0 24px; color: #fff; font: 500 15px/1 'Instrument Sans', Arial, sans-serif; text-decoration: none; background: #151717; border-radius: 999px; transition: color 200ms ease, background-color 200ms ease; } .ds-account:hover { color: #151717; background: #fff; } .ds-account:focus-visible { outline: 3px solid #151717; outline-offset: 4px; } .ds-account:active { color: #fff; background: #151717; }"
+    },
+    {
+      "name": "Editorial Navigation",
+      "kind": "nav",
+      "description": "A sparse centered navigation row with directional underline feedback.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main menu\"><a href=\"#\">Search</a><a href=\"#\">Agents</a><a href=\"#\">Resources</a><a href=\"#\">About</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 31px; color: #151717; font: 500 15px/1 'Instrument Sans', Arial, sans-serif; } .ds-nav a { position: relative; padding: 12px 0; color: inherit; text-decoration: none; } .ds-nav a::after { position: absolute; right: 0; bottom: 6px; left: 0; height: 1px; content: ''; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform 240ms ease; } .ds-nav a:hover::after, .ds-nav a:focus-visible::after { transform: scaleX(1); transform-origin: left; } .ds-nav a:focus-visible { outline: 3px solid #151717; outline-offset: 4px; } .ds-nav a:active { opacity: 0.5; }"
+    },
+    {
+      "name": "Hero Statement",
+      "kind": "custom",
+      "description": "The centered editorial statement with bold, muted, and action hierarchy.",
+      "html": "<section class=\"ds-statement\"><h1>Come Home to Haven</h1><p>Expert agents. <strong>Real guidance.</strong> <span>A clear path to what comes next.</span></p><a href=\"#\">Explore Homes</a></section>",
+      "css": ".ds-statement { padding: 56px 24px; color: #151717; font-family: 'Instrument Sans', Arial, sans-serif; text-align: center; background: #fff; } .ds-statement h1 { margin: 0; font-size: clamp(4.8rem, 7.3vw, 6.6rem); font-weight: 700; line-height: .93; letter-spacing: -.02em; } .ds-statement p { margin: 22px 0 0; font-size: clamp(1.2rem, 2.2vw, 2rem); font-weight: 500; line-height: 1.3; letter-spacing: -.02em; } .ds-statement p strong { font-weight: 700; } .ds-statement p span { color: rgba(21,23,23,.5); } .ds-statement a { display: inline-flex; margin-top: 31px; min-height: 46px; padding: 0 25px; align-items: center; color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; background: #151717; border: 1px solid #151717; border-radius: 999px; transition: color 220ms ease, background-color 220ms ease, transform 220ms ease; } .ds-statement a:hover { color: #151717; background: transparent; transform: translateY(-2px); } .ds-statement a:focus-visible { outline: 3px solid #151717; outline-offset: 4px; } .ds-statement a:active { transform: translateY(0); }"
+    },
+    {
+      "name": "HAVEN Mask Transition",
+      "kind": "custom",
+      "description": "The signature mark treatment that moves from drawn outline to image-filled silhouette.",
+      "html": "<div class=\"ds-haven-mask\" role=\"img\" tabindex=\"0\" aria-label=\"HAVEN logo containing an architectural sky scene\"><img class=\"ds-haven-sky\" src=\"/assets/hero-sky.webp\" alt=\"\"><img class=\"ds-haven-house\" src=\"/assets/hero-house.webp\" alt=\"\"><span>HAVEN</span></div>",
+      "css": ".ds-haven-mask { position: relative; width: min(67.85vw, 977px); aspect-ratio: 977 / 423; overflow: hidden; -webkit-mask: url('/assets/haven-logo.svg') center / contain no-repeat; mask: url('/assets/haven-logo.svg') center / contain no-repeat; transition: transform 600ms cubic-bezier(.2,.8,.2,1), opacity 300ms ease; } .ds-haven-mask img { position: absolute; display: block; width: 100%; height: 100%; object-fit: cover; } .ds-haven-sky { inset: 0; } .ds-haven-house { inset: 18% 0 0; object-fit: contain !important; object-position: top center; } .ds-haven-mask span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } .ds-haven-mask:hover { transform: scale(1.025); } .ds-haven-mask:focus-visible { outline: 3px solid #151717; outline-offset: 4px; } .ds-haven-mask:active { transform: scale(1); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The House Inside the Mark",
+    "overview": "This world treats a home not as a catalogue item but as atmosphere becoming identity. Pale sky, isolated architecture, drifting cloud, and rising smoke create cinematic scale; the journey culminates when that complete landscape is held inside the exact HAVEN letterforms.\n\nThe editorial layer is deliberately restrained: black ink on white, one geometric sans serif, sparse navigation, oversized type, and capsule actions. The interface stays quiet so the scroll choreography can carry the emotion. Every movement preserves spatial continuity and feels like a camera move through one scene, never a collection of unrelated effects.",
+    "keyCharacteristics": [
+      "Monochrome editorial controls over a photographic sky and architectural composition.",
+      "Oversized, tightly tracked headlines balanced by compact navigation and pill actions.",
+      "Full-viewport sticky staging with long, scrubbed transforms and layered parallax.",
+      "An exact HAVEN logo silhouette used as both outline and photographic mask.",
+      "Smooth reduced-motion and responsive fallbacks that preserve the visual hierarchy."
+    ],
+    "rules": [
+      {
+        "name": "The Monochrome Interface Rule",
+        "body": "Interactive chrome remains Carbon Ink and Clear Paper; color arrives through the photographic atmosphere, not extra UI accents.",
+        "section": "colors"
+      },
+      {
+        "name": "The Contrast Is the State Rule",
+        "body": "Hover states invert or reveal the existing black-and-white relationship instead of introducing decorative color.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Hierarchy comes from scale, weight, opacity, and spacing; do not add a decorative display face.",
+        "section": "typography"
+      },
+      {
+        "name": "The Phrase First Rule",
+        "body": "Preserve complete phrases and balanced wraps before reducing display scale.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Stage Rule",
+        "body": "All hero layers share one sticky viewport and one spatial coordinate system so scroll motion reads as a continuous camera move.",
+        "section": "layout"
+      },
+      {
+        "name": "The Atmospheric Depth Rule",
+        "body": "Use overlap and transformed image planes for depth; never add card shadows to the hero world.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Exact Mark Rule",
+        "body": "The outline, mask, and header brand must derive from the same HAVEN vector artwork so every transition lands without silhouette drift.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep the interface monochrome and let the source imagery carry atmospheric color.",
+      "Do preserve the exact HAVEN vector across the header, outline drawing, and image mask.",
+      "Do animate transforms and opacity on independent layers to maintain smooth spatial continuity.",
+      "Do enlarge controls and rebalance fixed scene geometry for mobile rather than merely scaling the desktop composition.",
+      "Do make the static reduced-motion state complete, legible, and immediately available."
+    ],
+    "donts": [
+      "Don't introduce gradients, colored buttons, glass cards, or shadows that compete with the photographic stage.",
+      "Don't substitute a font-rendered word for the HAVEN vector or alter its proportions.",
+      "Don't scatter the hero into disconnected animations; every layer should advance one continuous reveal.",
+      "Don't hide content behind loading choreography after required assets and fonts are ready.",
+      "Don't extend the hero's visual treatment into unrelated landing-page sections without a product reason."
+    ]
+  }
+}
