@@ -27,6 +27,16 @@ npm run dev     # start dev server at http://localhost:5173
 | `npm run preview` | Serve the production build locally to verify the output.            |
 | `npm run lint`    | Run ESLint across the project.                                      |
 
+
+## Deployment (Vercel)
+
+The app is ready for zero-config Vercel deployment:
+
+- **Framework Preset**: Vite
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **SPA Rewrites**: Handled by `vercel.json`
+
 ## Project structure
 
 ```
