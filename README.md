@@ -43,6 +43,7 @@ The app is ready for zero-config Vercel deployment:
 ├── index.html                 # HTML entry point
 ├── vite.config.js             # Vite + React + Tailwind plugins
 ├── eslint.config.js           # Flat ESLint config
+├── vercel.json                # Vercel deployment & SPA rewrites configuration
 ├── DESIGN.md                  # Design system: palette, type, components
 ├── PRODUCT.md                 # Product brief and scope
 ├── public/
@@ -53,12 +54,30 @@ The app is ready for zero-config Vercel deployment:
 │   └── reference-next-section.mjs  # Reference-site section inspection
 └── src/
     ├── main.jsx               # React root
-    ├── App.jsx                # Header + page composition
+    ├── App.jsx                # Page composition
     ├── styles.css             # Global styles and design tokens
+    ├── data/
+    │   └── landingData.js     # Data models for services, testimonials, features, posts
     └── components/
+        ├── index.js           # Barrel export for all components
+        ├── Header.jsx         # Site navigation header
         ├── Hero.jsx           # Pinned hero + monogram mask transition
-        ├── LandingSections.jsx# Editorial sections below the hero
-        └── SmoothScroll.jsx   # Lenis + ScrollTrigger synchronization
+        ├── LandingSections.jsx# Editorial sections assembly & ScrollTrigger animations
+        ├── SmoothScroll.jsx   # Lenis + ScrollTrigger synchronization
+        ├── ui/                # Reusable UI primitives
+        │   ├── index.js
+        │   └── ActionLink.jsx # ActionLink and ArrowIcon components
+        └── sections/          # Individual modular sections
+            ├── index.js
+            ├── WhyHaven.jsx
+            ├── IdentitySection.jsx
+            ├── RewiredSection.jsx
+            ├── AgentsSection.jsx
+            ├── TestimonialsSection.jsx
+            ├── ServicesSection.jsx
+            ├── FeaturesSection.jsx
+            ├── BlogSection.jsx
+            └── Footer.jsx
 ```
 
 ## How the motion works
